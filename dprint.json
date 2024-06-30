@@ -1,0 +1,39 @@
+{
+  "typescript": {
+    "lineWidth": 90,
+    "quoteStyle": "preferSingle",
+    "module.sortImportDeclarations": "caseSensitive",
+    "importDeclaration.sortNamedImports": "caseSensitive",
+    "importDeclaration.forceSingleLine": true,
+    "commentLine.forceSpaceAfterSlashes": false,
+    "trailingCommas": "never",
+    "arrayExpression.trailingCommas": "onlyMultiLine",
+    "binaryExpression.operatorPosition": "sameLine",
+    "arrowFunction.useParentheses": "preferNone",
+    "arguments.preferHanging": "onlySingleItem",
+    "ignoreNodeCommentText": "prettier-ignore"
+  },
+  "json": {
+  },
+  "prettier": {
+    "printWidth": 80,
+    "tabWidth": 2,
+    "useTabs": false,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "none",
+    "bracketSpacing": true,
+    "bracketSameLine": false,
+    "arrowParens": "avoid",
+    "proseWrap": "preserve"
+  },
+  "excludes": [],
+  "includes": [
+    "src/**/*.{json,ts,html,md}"
+  ],
+  "plugins": [
+    "https://plugins.dprint.dev/typescript-0.88.3.wasm",
+    "https://plugins.dprint.dev/json-0.19.0.wasm",
+    "https://plugins.dprint.dev/prettier-0.30.0.json@17f1975e77b53f95c642a25588bf27b0d3f36ebb70cbe134875f6b3c75736eed"
+  ]
+}
