@@ -1,0 +1,15 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+# Get a list of staged files (files that are being committed)
+#                        exclude deleted             only staged
+staged_files="$(git diff --diff-filter=d --name-only --cached)"
+
+if [ -n "$staged_files" ]; then
+  # Format
+  echo "$staged_files" | tr '\n' '\0' | xargs -0 "./node_modules/.bin/dprint" fmt --allow-no-files
+
+  # Add them again, to commit changes done during formatting
+  echo "$staged_files" | tr '\n' '\0' | xargs -0 git add
+fi
+
