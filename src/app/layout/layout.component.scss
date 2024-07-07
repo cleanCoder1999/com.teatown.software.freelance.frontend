@@ -113,12 +113,22 @@ h2, h4 {
     right: 0;
     opacity: 0;
     z-index: 99; /* Make sure it does not overlap */
-    border-radius: 10px; /* Rounded corners */
+    border-radius: 50%; /* Rounded corners */
+    border: none;
+
+    img {
+        height: 2rem;
+        width: 2rem;
+        padding-top: 0.2rem;
+    }
 }
 
 .show-scroll-to-top {
     opacity: 1 !important;
     transition: all 0.5s ease-in-out;
-    background-color: #555; /* Add a dark-grey background on hover */
 }
 
+.show-scroll-to-top:hover {
+    background-color: lightgrey;
+    transition: background-color 0.1s;
+}
