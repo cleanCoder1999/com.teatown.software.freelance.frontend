@@ -1,5 +1,61 @@
-<div>
-  Hello, my name is Lucas. I have been coding for 9+ years. During this period I
-  have been creating targeted solutions for clients in marketing, the car dealer
-  industry, and the beverage industry.
+<!-- todo add a scroll progress bar here -->
+
+<div
+  class="scroll-to-top"
+  (click)="scrollToTop()"
+  [ngClass]="{ 'show-scroll-to-top': windowScrolled }"
+>
+  <!--    <img src="" alt="to-top-icon" />-->
+  Top
+</div>
+
+<div class="layout">
+  <div class="content">
+    <div class="short-intro">
+      <div>
+        <h2 class="name">Lucas C. Müllner</h2>
+      </div>
+
+      <div>
+        <!-- todo move the style into a class -->
+        <div style="font-weight: bold">freelance full-stack</div>
+        <div style="font-weight: bold">software developer</div>
+
+        <div class="contact">
+          <a target="_blank" href="mailto:lucasmuellner@gmail.com"
+            ><img src="assets/svg/envelope.svg" alt="mailto"
+          /></a>
+          <a target="_blank" href="https://github.com/cleanCoder1999"
+            ><img src="assets/svg/github.svg" alt="github"
+          /></a>
+          <a target="_blank" href="https://www.linkedin.com/in/lucasmuellner/"
+            ><img src="assets/svg/linkedin.svg" alt="linkedin"
+          /></a>
+        </div>
+
+        <div class="tech-stack-container">
+          <h4 class="tech-stack-label">tech stack</h4>
+          <div class="tech-stack-grid">
+            <div class="tech-stack-grid-row">
+              <span class="java">Java</span>
+              <span class="springboot">SpringBoot</span>
+            </div>
+            <div class="tech-stack-grid-row">
+              Angular
+              <div>TypeScript HTML CSS</div>
+            </div>
+            <div class="tech-stack-grid-row">Docker</div>
+            <div class="tech-stack-grid-row">SQL</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="text">
+      Hello, my name is Lucas. I have been coding for 9+ years. During this
+      period I have been creating targeted solutions for clients in marketing,
+      the car dealer industry, and the beverage industry.
+    </div>
+
+    <footer class="footer">Legal notice, etc.</footer>
+  </div>
 </div>
