@@ -1,4 +1,57 @@
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  /*background-color: var(--steel-pink);*/
+  background-color: var(--persian-green);
+}
+
+:root {
+  /* CSS HEX */
+  --steel-pink: #c720abff;
+  --baby-powder: #fcfffdff;
+  --yellow-green: #91cd3cff;
+  --persian-green: #17a398ff;
+  --eerie-black: #171d1cff;
+
+  /* CSS HSL */
+  --steel-pink: hsla(310, 72%, 45%, 1);
+  --baby-powder: hsla(140, 100%, 99%, 1);
+  --yellow-green: hsla(85, 59%, 52%, 1);
+  --persian-green: hsla(175, 75%, 36%, 1);
+  --eerie-black: hsla(170, 12%, 10%, 1);
+}
+
+/* SCSS HEX */
+$steel-pink: #c720abff;
+$baby-powder: #fcfffdff;
+$yellow-green: #91cd3cff;
+$persian-green: #17a398ff;
+$eerie-black: #171d1cff;
+
+/* SCSS HSL */
+//$steel-pink: hsla(310, 72%, 45%, 1);
+//$baby-powder: hsla(140, 100%, 99%, 1);
+//$yellow-green: hsla(85, 59%, 52%, 1);
+//$persian-green: hsla(175, 75%, 36%, 1);
+//$eerie-black: hsla(170, 12%, 10%, 1);
+
+/* SCSS RGB */
+//$steel-pink: rgba(199, 32, 171, 1);
+//$baby-powder: rgba(252, 255, 253, 1);
+//$yellow-green: rgba(145, 205, 60, 1);
+//$persian-green: rgba(23, 163, 152, 1);
+//$eerie-black: rgba(23, 29, 28, 1);
+
+/* SCSS Gradient */
+$gradient-top: linear-gradient(0deg, #c720abff, #fcfffdff, #91cd3cff, #17a398ff, #171d1cff);
+$gradient-right: linear-gradient(90deg, #c720abff, #fcfffdff, #91cd3cff, #17a398ff, #171d1cff);
+$gradient-bottom: linear-gradient(180deg, #c720abff, #fcfffdff, #91cd3cff, #17a398ff, #171d1cff);
+$gradient-left: linear-gradient(270deg, #c720abff, #fcfffdff, #91cd3cff, #17a398ff, #171d1cff);
+$gradient-top-right: linear-gradient(45deg, #c720abff, #fcfffdff, #91cd3cff, #17a398ff, #171d1cff);
+$gradient-bottom-right: linear-gradient(135deg, #c720abff, #fcfffdff, #91cd3cff, #17a398ff, #171d1cff);
+$gradient-top-left: linear-gradient(225deg, #c720abff, #fcfffdff, #91cd3cff, #17a398ff, #171d1cff);
+$gradient-bottom-left: linear-gradient(315deg, #c720abff, #fcfffdff, #91cd3cff, #17a398ff, #171d1cff);
+$gradient-radial: radial-gradient(#c720abff, #fcfffdff, #91cd3cff, #17a398ff, #171d1cff);
