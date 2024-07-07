@@ -1,0 +1,124 @@
+.layout {
+    color: var(--baby-powder);
+    font-family: monospace;
+    display: flex;
+    justify-content: center;
+}
+
+.content {
+    width: calc(2 / 3 * 100%);
+}
+
+div {
+    text-align: center;
+}
+
+h2, h4 {
+    font-family: monospace
+}
+
+.short-intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vH;
+}
+
+.name {
+    padding-top: 1.5em;
+    //font-family: "Times New Roman", serif;
+}
+
+.tech-stack-label {
+    font-weight: bold;
+}
+
+.text {
+    text-align: start;
+    padding-bottom: 2em;
+}
+
+@media screen and (max-width: 650px) {
+    .name {
+        font-size: 2.2rem;
+    }
+    .tech-stack-label {
+        font-size: 1.57rem;
+    }
+}
+
+@media screen and (max-width: 510px) {
+    .name {
+        font-size: 1.6rem;
+    }
+    .tech-stack-label {
+        font-size: 1.14rem;
+    }
+}
+
+.contact {
+    padding-top: 1.5em;
+
+    a > img {
+        width: 2.5rem;
+        padding: 0.25rem 0.5rem 0.25rem;
+    }
+}
+
+.tech-stack-container {
+    padding: 2em;
+}
+
+.tech-stack-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.tech-stack-grid-row {
+    padding-bottom: 0.75em;
+}
+
+.java {
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+    margin-right: 1em;
+}
+
+.springboot {
+    grid-row: 2 / 2;
+    grid-column: 1 / 2;
+    margin-left: 1em;
+}
+
+.angular {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+    margin-right: 1em;
+}
+
+.angular-languages {
+    // todo add styles
+}
+
+.footer {
+    padding: 2rem 0 2rem;
+}
+
+// scroll to top button
+.scroll-to-top {
+    bottom: 0;
+    cursor: pointer;
+    margin: 0 3rem 3rem;
+    position: fixed;
+    right: 0;
+    opacity: 0;
+    z-index: 99; /* Make sure it does not overlap */
+    border-radius: 10px; /* Rounded corners */
+}
+
+.show-scroll-to-top {
+    opacity: 1 !important;
+    transition: all 0.5s ease-in-out;
+    background-color: #555; /* Add a dark-grey background on hover */
+}
+
