@@ -132,3 +132,13 @@ h2, h4 {
     background-color: lightgrey;
     transition: background-color 0.1s;
 }
+
+.contact-form {
+    display: flex;
+    justify-content: center;
+}
+
+.contact-form > teatown-contact-form {
+    height: 100%;
+    width: calc(2 / 3 * 100%);
+}
