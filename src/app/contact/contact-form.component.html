@@ -1,4 +1,28 @@
 <form class="form">
+  <!-- todo make the code more generic with ngFor -->
+
+  <mat-form-field class="full-width">
+    <mat-label>Name</mat-label>
+    <input
+      type="email"
+      matInput
+      [formControl]="contactForm.controls.name"
+      [errorStateMatcher]="errorStateMatcher"
+      placeholder="Your name"
+    />
+
+    @if (
+      contactForm.controls.name.hasError('name') &&
+      !contactForm.controls.name.hasError('required')
+    ) {
+      <mat-error>Please enter a name w/o special characters</mat-error>
+    }
+
+    @if (contactForm.controls.name.hasError('required')) {
+      <mat-error>Name is <strong>required</strong></mat-error>
+    }
+  </mat-form-field>
+
   <mat-form-field class="full-width">
     <mat-label>Email</mat-label>
 
@@ -11,14 +35,36 @@
     />
 
     @if (
-      contactForm.controls.email?.hasError('email') &&
-      !contactForm.controls.email?.hasError('required')
+      contactForm.controls.email.hasError('email') &&
+      !contactForm.controls.email.hasError('required')
     ) {
       <mat-error>Please enter a valid email address</mat-error>
     }
 
-    @if (contactForm.controls.email?.hasError('required')) {
+    @if (contactForm.controls.email.hasError('required')) {
       <mat-error>Email is <strong>required</strong></mat-error>
+    }
+  </mat-form-field>
+
+  <mat-form-field class="full-width">
+    <mat-label>Message</mat-label>
+    <textarea
+      type="text"
+      matInput
+      [formControl]="contactForm.controls.message"
+      [errorStateMatcher]="errorStateMatcher"
+      placeholder="Your message..."
+    ></textarea>
+
+    @if (
+      contactForm.controls.message.hasError('message') &&
+      !contactForm.controls.message.hasError('required')
+    ) {
+      <mat-error>Please enter a name w/o special characters</mat-error>
+    }
+
+    @if (contactForm.controls.message.hasError('required')) {
+      <mat-error>Message is <strong>required</strong></mat-error>
     }
   </mat-form-field>
 </form>
