@@ -4,6 +4,7 @@ import { FormBuilder, FormControl, FormGroupDirective, NgForm, ReactiveFormsModu
 import { ErrorStateMatcher } from '@angular/material/core';
 import { MatError, MatFormField, MatHint, MatLabel } from '@angular/material/form-field';
 import { MatInput } from '@angular/material/input';
+import { EmailService } from '../services/email.service';
 
 /** Error when invalid control is dirty, touched, or submitted. */
 export class CustomErrorStateMatcher implements ErrorStateMatcher {
@@ -41,7 +42,10 @@ export class ContactFormComponent {
 
   errorStateMatcher = new CustomErrorStateMatcher();
 
-  constructor(private formBuilder: FormBuilder) {
+  constructor(
+    private formBuilder: FormBuilder,
+    private emailService: EmailService
+  ) {
   }
 
   get email() {
@@ -57,7 +61,15 @@ export class ContactFormComponent {
   }
 
   onSubmit() {
-    // todo add functionality
+    if (!this.name.value || !this.email.value || !this.message.value) {
+      throw new Error('Submit was not successful. Each form field must be filled.');
+    }
+    this.emailService.sendContactToEmailInbox(
+      this.name.value,
+      this.email.value,
+      this.message.value
+    )
+      .subscribe();
   }
 
   formValuesChanged() {
