@@ -10,3 +10,18 @@
 .full-width {
   width: 100%;
 }
+
+.submit-button {
+  border-radius: 0.7rem; /* Rounded corners */
+  border: none;
+  height: 2.5rem;
+  width: 8rem;
+  font-size: 1.2rem;
+  font-family: Courier, "Courier New", monospace;
+}
+
+.submit-button:hover:enabled {
+  cursor: pointer;
+  background-color: lightgrey;
+  transition: background-color 0.1s;
+}
