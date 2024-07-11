@@ -142,3 +142,9 @@ h2, h4 {
     height: 100%;
     width: calc(2 / 3 * 100%);
 }
+
+@media screen and (max-width: 605px) {
+    .contact-form > teatown-contact-form {
+        width: unset;
+    }
+}
