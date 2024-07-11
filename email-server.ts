@@ -3,13 +3,13 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const nodemailer = require('nodemailer');
 
-const app = express();
+const emailServer = express();
 const port = 3000;
 
-app.use(bodyParser.json());
-app.use(cors());
+emailServer.use(bodyParser.json());
+emailServer.use(cors());
 
-app.post('/send-email', (req, res) => {
+emailServer.post('/submit', (req, res) => {
     const name = req.body.name;
     const email = req.body.email;
     const message = req.body.message;
@@ -45,6 +45,6 @@ app.post('/send-email', (req, res) => {
   });
 });
 
-app.listen(port, () => {
+emailServer.listen(port, () => {
   console.log(`Server listening at http://localhost:${port}`);
 });
