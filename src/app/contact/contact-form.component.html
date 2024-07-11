@@ -6,19 +6,16 @@
     <input
       type="email"
       matInput
-      [formControl]="contactForm.controls.name"
+      [formControl]="name"
       [errorStateMatcher]="errorStateMatcher"
       placeholder="Your name"
     />
 
-    @if (
-      contactForm.controls.name.hasError('name') &&
-      !contactForm.controls.name.hasError('required')
-    ) {
+    @if (name.hasError('name') && !name.hasError('required')) {
       <mat-error>Please enter a name w/o special characters</mat-error>
     }
 
-    @if (contactForm.controls.name.hasError('required')) {
+    @if (name.hasError('required')) {
       <mat-error>Name is <strong>required</strong></mat-error>
     }
   </mat-form-field>
@@ -29,19 +26,16 @@
     <input
       type="email"
       matInput
-      [formControl]="contactForm.controls.email"
+      [formControl]="email"
       [errorStateMatcher]="errorStateMatcher"
       placeholder="your@email.com"
     />
 
-    @if (
-      contactForm.controls.email.hasError('email') &&
-      !contactForm.controls.email.hasError('required')
-    ) {
+    @if (email.hasError('email') && !email.hasError('required')) {
       <mat-error>Please enter a valid email address</mat-error>
     }
 
-    @if (contactForm.controls.email.hasError('required')) {
+    @if (email.hasError('required')) {
       <mat-error>Email is <strong>required</strong></mat-error>
     }
   </mat-form-field>
@@ -51,20 +45,25 @@
     <textarea
       type="text"
       matInput
-      [formControl]="contactForm.controls.message"
+      [formControl]="message"
       [errorStateMatcher]="errorStateMatcher"
       placeholder="Your message..."
     ></textarea>
 
-    @if (
-      contactForm.controls.message.hasError('message') &&
-      !contactForm.controls.message.hasError('required')
-    ) {
+    @if (message.hasError('message') && !message.hasError('required')) {
       <mat-error>Please enter a name w/o special characters</mat-error>
     }
 
-    @if (contactForm.controls.message.hasError('required')) {
+    @if (message.hasError('required')) {
       <mat-error>Message is <strong>required</strong></mat-error>
     }
   </mat-form-field>
 </form>
+
+<button
+  (click)="onSubmit()"
+  class="submit-button"
+  [disabled]="!formValuesChanged()"
+>
+  Submit
+</button>
