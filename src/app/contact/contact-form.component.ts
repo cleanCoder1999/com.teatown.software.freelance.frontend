@@ -43,4 +43,26 @@ export class ContactFormComponent {
 
   constructor(private formBuilder: FormBuilder) {
   }
+
+  get email() {
+    return this.contactForm.controls.email;
+  }
+
+  get name() {
+    return this.contactForm.controls.name;
+  }
+
+  get message() {
+    return this.contactForm.controls.message;
+  }
+
+  onSubmit() {
+    // todo add functionality
+  }
+
+  formValuesChanged() {
+    return this.email.value !== '' &&
+      this.name?.value !== '' &&
+      this.message?.value !== '';
+  }
 }
