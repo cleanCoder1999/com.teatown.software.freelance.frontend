@@ -8,6 +8,10 @@ body {
   background-color: var(--persian-green);
 }
 
+body, button, a, img {
+  cursor: none;
+}
+
 :root {
   /* CSS HEX */
   --steel-pink: #c720abff;
