@@ -1,5 +1,8 @@
 @media (pointer: fine) {
   .circle {
+    // todo maybe use this later
+    //transition: all 300ms ease-out;
+    //mix-blend-mode: difference; //for dark and light modes
     transform: translateX(-50%) translateY(-50%);
     position: fixed;
     pointer-events: none;
@@ -9,7 +12,7 @@
     border-radius: 50%;
     width: 3rem;
     height: 3rem;
-    background-color: var(--steel-pink);
+    background-color: var(--baby-powder);
     display: flex;
     justify-content: center;
     align-items: center;
