@@ -1,1 +1,5 @@
-<teatown-layout></teatown-layout>
+<div #cursor class="circle" [ngClass]="{ 'circle-transparent': isFocussed }">
+  <div class="dot"></div>
+</div>
+
+<teatown-layout (focus)="onFocus($event)"></teatown-layout>
