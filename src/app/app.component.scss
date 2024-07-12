@@ -1,0 +1,29 @@
+@media (pointer: fine) {
+  .circle {
+    transform: translateX(-50%) translateY(-50%);
+    position: fixed;
+    pointer-events: none;
+    z-index: 10000;
+
+    border: solid 0.08rem black;
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    background-color: var(--steel-pink);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .circle-transparent {
+    background-color: transparent;
+  }
+
+  .dot {
+    border: solid 0.2rem black;
+    border-radius: 50%;
+    width: 0.01rem;
+    height: 0.01rem;
+    background-color: var(--eerie-black);
+  }
+}
