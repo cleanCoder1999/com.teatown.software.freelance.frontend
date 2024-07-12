@@ -73,8 +73,8 @@
 </form>
 
 <button
-  (mouseenter)="focus.emit(true)"
-  (mouseleave)="focus.emit(false)"
+  (mouseenter)="formValuesChanged() ? focus.emit(true) : null"
+  (mouseleave)="formValuesChanged() ? focus.emit(false) : null"
   (click)="onSubmit()"
   class="submit-button"
   [disabled]="!formValuesChanged()"
