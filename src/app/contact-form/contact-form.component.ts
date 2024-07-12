@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { FormBuilder, FormControl, FormGroupDirective, NgForm, ReactiveFormsModule, Validators } from '@angular/forms';
 import { ErrorStateMatcher } from '@angular/material/core';
 import { MatError, MatFormField, MatHint, MatLabel } from '@angular/material/form-field';
@@ -41,6 +41,9 @@ export class ContactFormComponent {
   });
 
   errorStateMatcher = new CustomErrorStateMatcher();
+
+  @Output()
+  focus = new EventEmitter<boolean>();
 
   constructor(
     private formBuilder: FormBuilder,
