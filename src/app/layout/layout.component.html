@@ -1,6 +1,8 @@
 <!-- todo add a scroll progress bar here -->
 
 <button
+  (mouseenter)="focus.emit(true)"
+  (mouseleave)="focus.emit(false)"
   class="scroll-to-top"
   (click)="scrollToTop()"
   [ngClass]="{ 'show-scroll-to-top': windowScrolled }"
@@ -21,13 +23,25 @@
         <div style="font-weight: bold">software developer</div>
 
         <div class="contact">
-          <a target="_blank" href="mailto:lucasmuellner@gmail.com"
+          <a
+            (mouseenter)="focus.emit(true)"
+            (mouseleave)="focus.emit(false)"
+            target="_blank"
+            href="mailto:lucasmuellner@gmail.com"
             ><img src="assets/svg/envelope.svg" alt="mailto"
           /></a>
-          <a target="_blank" href="https://github.com/cleanCoder1999"
+          <a
+            (mouseenter)="focus.emit(true)"
+            (mouseleave)="focus.emit(false)"
+            target="_blank"
+            href="https://github.com/cleanCoder1999"
             ><img src="assets/svg/github.svg" alt="github"
           /></a>
-          <a target="_blank" href="https://www.linkedin.com/in/lucasmuellner/"
+          <a
+            (mouseenter)="focus.emit(true)"
+            (mouseleave)="focus.emit(false)"
+            target="_blank"
+            href="https://www.linkedin.com/in/lucasmuellner/"
             ><img src="assets/svg/linkedin.svg" alt="linkedin"
           /></a>
         </div>
@@ -57,7 +71,7 @@
     </div>
 
     <div class="contact-form">
-      <teatown-contact-form></teatown-contact-form>
+      <teatown-contact-form (focus)="focus.emit($event)"></teatown-contact-form>
     </div>
 
     <footer class="footer">Legal notice, etc.</footer>

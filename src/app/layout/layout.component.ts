@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { ContactFormComponent } from '../contact-form/contact-form.component';
 
 @Component({
@@ -11,6 +11,9 @@ import { ContactFormComponent } from '../contact-form/contact-form.component';
 })
 export class LayoutComponent implements OnInit {
   windowScrolled = false;
+
+  @Output()
+  focus = new EventEmitter<boolean>();
 
   ngOnInit() {
     if (typeof window !== 'undefined') {
