@@ -1,11 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { ContactFormComponent } from '../contact-form/contact-form.component';
+import { ServiceOfferingsComponent } from '../service-offerings/service-offerings.component';
 
 @Component({
   selector: 'teatown-layout',
   standalone: true,
-  imports: [CommonModule, ContactFormComponent],
+  imports: [CommonModule, ContactFormComponent, ServiceOfferingsComponent],
   templateUrl: './layout.component.html',
   styleUrl: './layout.component.scss'
 })
