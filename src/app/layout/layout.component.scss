@@ -113,13 +113,13 @@ h2, h4 {
 .scroll-to-top {
     bottom: 0;
     cursor: pointer;
-    margin: 0 3rem 3rem;
+    margin: 0 4rem 3rem;
     position: fixed;
     right: 0;
     opacity: 0;
     z-index: 99; /* Make sure it does not overlap */
     border-radius: 50%; /* Rounded corners */
-    border: none;
+    border: solid black;
 
     img {
         height: 2rem;
@@ -130,11 +130,12 @@ h2, h4 {
 
 .show-scroll-to-top {
     opacity: 1 !important;
-    transition: all 0.5s ease-in-out;
+    background-color: transparent;
+    transition: opacity 0.5s ease-in-out;
 }
 
 .show-scroll-to-top:hover {
-    background-color: lightgrey;
+    background-color: var(--baby-powder);
     transition: background-color 0.1s;
 }
 
