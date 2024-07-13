@@ -1,0 +1,33 @@
+@import "https://unpkg.com/open-props";
+
+.scroller {
+  // todo how can I ensure that the elements are scrolled to the start of the layout??
+
+  --_spacer: 1rem;
+
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 21%;
+  gap: var(--_spacer);
+
+  overflow-x: auto; // horizontal scroll
+  // todo
+  //  how can I change the overscroll-behavior
+  //  so that scrolling continues down automatically
+  //  when the scroll-container reached its last element?
+  //overscroll-behavior-y: auto;
+  overscroll-behavior-inline: contains;
+}
+
+.scroll-element {
+  display: grid;
+  grid-template-rows: min-content;
+  border: solid orange;
+  padding: var(--_spacer);
+  background: var(--eerie-black);
+  border-radius: var(--radius-2);
+
+  // box-shadow: offset-x offset-y blur-radius
+  // https://developer.mozilla.org/en-US/docs/Web/CSS/box-shadow
+  box-shadow: .5rem .5rem 1rem olive;
+}
