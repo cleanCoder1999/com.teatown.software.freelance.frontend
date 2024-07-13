@@ -8,8 +8,8 @@ body {
   background-color: var(--persian-green);
 }
 
-body, button, a, img {
-  cursor: none;
+body, button, a, img, input, textarea {
+  cursor: none !important;
 }
 
 :root {
