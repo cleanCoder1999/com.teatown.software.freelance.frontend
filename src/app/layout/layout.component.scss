@@ -61,11 +61,12 @@ h2, h4 {
 
     a > img {
         width: 2.5rem;
-        padding: 0.25rem 0.5rem 0.25rem;
+        border-radius: 50%;
+        padding: 0.5rem;
     }
 
     img:hover {
-        background-color: lightgrey;
+        background-color: var(--baby-powder);
     }
 }
 
