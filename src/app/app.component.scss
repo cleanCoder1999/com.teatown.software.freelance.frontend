@@ -10,9 +10,13 @@
 
     border: solid 0.08rem black;
     border-radius: 50%;
+    background-color: var(--baby-powder);
+    transition:
+            border 0.3s ease-in-out 0.1s,
+            background-color 0.3s ease-in-out 0.1s;
+
     width: 3rem;
     height: 3rem;
-    background-color: var(--baby-powder);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -20,6 +24,7 @@
 
   .circle-transparent {
     background-color: transparent;
+    border: transparent;
   }
 
   .dot {
