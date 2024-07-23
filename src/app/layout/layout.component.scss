@@ -87,6 +87,43 @@ h2, h4 {
     padding-bottom: 0.75em;
 }
 
+.comb {
+    width: 3.5rem;
+    height: 5.5rem;
+    background-color: var(--eerie-black);
+    transform: rotate(120deg);
+
+}
+
+.comb::before {
+    content: "";
+    display: block;
+    /* I made it red just to show you where the triangle is */
+    border-right: solid var(--eerie-black) 1.75rem;
+    border-top: solid transparent 3.15rem;
+    border-bottom: solid transparent 3.15rem;
+    position: absolute;
+    left: -1.735rem;
+    top: 0;
+}
+
+.comb::after {
+    content: "";
+    display: block;
+    /* I made it red just to show you where the triangle is */
+    border-right: solid var(--eerie-black) 1.75rem;
+    border-top: solid transparent 3.15rem;
+    border-bottom: solid transparent 3.15rem;
+    /* position it at the bottom */
+    position: absolute;
+    left: 3.5rem;
+    /* flipping the triangle */
+    transform: scaleX(-1);
+
+    /* or rotate it 180deg
+    transform: rotate(180deg); */
+}
+
 .java {
     grid-row: 1 / 2;
     grid-column: 1 / 2;
@@ -159,4 +196,9 @@ h2, h4 {
     .contact-form > teatown-contact-form {
         width: unset;
     }
+}
+
+.service-offerings-scroller {
+    display: unset;
+    width: 100vW;
 }
