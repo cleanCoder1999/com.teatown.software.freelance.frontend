@@ -78,72 +78,79 @@ h2, h4 {
     padding: 2em;
 }
 
+// @deprecated
 .tech-stack-grid {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
 }
 
+// @deprecated
 .tech-stack-grid-row {
     padding-bottom: 0.75em;
 }
 
-.comb {
-    width: 3.5rem;
-    height: 5.5rem;
-    background-color: var(--eerie-black);
-    transform: rotate(120deg);
+.hexagon {
+    div {
+        transform: translateY(5.5rem);
+    }
 
+    img {
+        width: 8.5rem;
+        border-radius: 50%;
+        padding: 0.5rem;
+        transition: transform .2s;
+    }
 }
 
-.comb::before {
-    content: "";
-    display: block;
-    /* I made it red just to show you where the triangle is */
-    border-right: solid var(--eerie-black) 1.75rem;
-    border-top: solid transparent 3.15rem;
-    border-bottom: solid transparent 3.15rem;
-    position: absolute;
-    left: -1.735rem;
-    top: 0;
+.tech-stack-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.comb::after {
-    content: "";
-    display: block;
-    /* I made it red just to show you where the triangle is */
-    border-right: solid var(--eerie-black) 1.75rem;
-    border-top: solid transparent 3.15rem;
-    border-bottom: solid transparent 3.15rem;
-    /* position it at the bottom */
-    position: absolute;
-    left: 3.5rem;
-    /* flipping the triangle */
-    transform: scaleX(-1);
+// todo adjust styles
+.hexagon-logo {
+    /*width: 8.5rem;
+    height: 8.5rem;*/
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 
-    /* or rotate it 180deg
-    transform: rotate(180deg); */
+    img {
+        padding: 0.1rem;
+    }
+
+    img:first-child {
+        width: 8.5rem;
+        border-radius: 50%;
+        background-color: var(--baby-powder);
+    }
+
+    img:last-child {
+        transform: translateY(-11.6rem) scale(0.3); // Angular logo
+    }
 }
 
+// @deprecated
 .java {
     grid-row: 1 / 2;
     grid-column: 1 / 2;
     margin-right: 1em;
 }
 
+// @deprecated
 .springboot {
     grid-row: 2 / 2;
     grid-column: 1 / 2;
     margin-left: 1em;
 }
 
+// @deprecated
 .angular {
     grid-row: 1 / 2;
     grid-column: 2 / 3;
     margin-right: 1em;
-}
-
-.angular-languages {
-    // todo add styles
 }
 
 .footer {
